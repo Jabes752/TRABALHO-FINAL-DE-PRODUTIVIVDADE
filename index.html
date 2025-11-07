@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Musify - Ouça o melhor som</title>
+
+  <style>
+    /* ======= ESTILO GERAL ======= */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1db954;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    /* ======= SEÇÃO DE MÚSICAS ======= */
+    .musicas {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .musica-card {
+      background-color: #181818;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .musica-card:hover {
+      transform: scale(1.05);
+      background-color: #282828;
+    }
+
+    .musica-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .musica-card h3 {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #1db954;
+      color: #000;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🎵 Musify</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Playlists</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="musicas">
+      <h2>Minhas Músicas</h2>
+
+      <div class="musica-card">
+        <img src="https://www.bensound.com/bensound-img/ukulele.jpg" alt="Capa da música 1">
+        <h3>Bensound - Ukulele</h3>
+        <audio controls>
+          <source src="https://www.bensound.com/bensound-music/bensound-ukulele.mp3" type="audio/mp3">
+        </audio>
+      </div>
+
+      <div class="musica-card">
+        <img src="https://www.bensound.com/bensound-img/sunny.jpg" alt="Capa da música 2">
+        <h3>Bensound - Sunny</h3>
+        <audio controls>
+          <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3">
+        </audio>
+      </div>
+
+      <div class="musica-card">
+        <img src="https://www.bensound.com/bensound-img/energy.jpg" alt="Capa da música 3">
+        <h3>Bensound - Energy</h3>
+        <audio controls>
+          <source src="https://www.bensound.com/bensound-music/bensound-energy.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🎧 Música gratuita de <a href="https://www.bensound.com" target="_blank">Bensound.com</a></p>
+  </footer>
+</body>
+</html>
